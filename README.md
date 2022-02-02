@@ -81,43 +81,33 @@ model.compile(
 )
 
 
-**Trained the model over 10 epochs for demonstration purposes:**
-EPOCHS = 10
-history = model.fit(
-    train_ds,
-    validation_data=val_ds,
-    epochs=EPOCHS,
-    callbacks=tf.keras.callbacks.EarlyStopping(verbose=1, patience=2),
-)
+###### Trained the model over 10 epochs for demonstration purposes
+###### EPOCHS = 10
+history = model.fit(train_ds,validation_data=val_ds,epochs=EPOCHS,callbacks=tf.keras.callbacks.EarlyStopping(verbose=1, patience=2),)
 
-<img src="image/ceack.png" width="100%" align="top-left" alt="" title="RNN" />
+<img src="image/cheack.png" width="100%" align="top-left" alt="" title="RNN" />
 
 **training and validation loss curves to check how my model has improved during training:**
 <img src="image/accuracy.png" width="100%" align="top-left" alt="" title="RNN" />
 
 ###  Evaluate the model performance
-**then i Run the model on the test set and check the model's performance:**
+###### then i run the model on the test set and check the model's performance:
 
-test_audio = []
-test_labels = []
+###### test_audio = []
+###### test_labels = []
+###### for audio, label in test_ds:
+  ###### test_audio.append(audio.numpy())
+  ###### test_labels.append(label.numpy())
+###### test_audio = np.array(test_audio)
+###### test_labels = np.array(test_labels)
+###### y_pred = np.argmax(model.predict(test_audio), axis=1)
+###### y_true = test_labels
+###### test_acc = sum(y_pred == y_true) / len(y_true)
+###### print(f'Test set accuracy: {test_acc:.0%}')
 
-for audio, label in test_ds:
-  test_audio.append(audio.numpy())
-  test_labels.append(label.numpy())
+###### Test set accuracy: 85%
 
-test_audio = np.array(test_audio)
-test_labels = np.array(test_labels)
-
-y_pred = np.argmax(model.predict(test_audio), axis=1)
-y_true = test_labels
-
-test_acc = sum(y_pred == y_true) / len(y_true)
-print(f'Test set accuracy: {test_acc:.0%}')
-
-Test set accuracy: 85%
-
-
-Display a confusion matrix
+### Display a confusion matrix
 Use a confusion matrix to check how well the model did classifying each of the commands in the test set
 <img src="image/confusionMatrix.png" width="100%" align="top-left" alt="" title="RNN" />
 
@@ -125,8 +115,8 @@ Run inference on an audio file:
 Convert waveforms to spectrograms
 The waveforms in the dataset are represented in the time domain.  transform the waveforms from the time-domain signals into the time-frequency-domain signals by computing the short-time Fourier transform (STFT) to convert the waveforms to as spectrograms, which show frequency changes over time and can be represented as 2D images.
 
-#wave and specogram form of input audio
+### wave and specogram form of input audio
 <img src="image/sampleWavefomr.png" width="100%" align="top-left" alt="" title="RNN" />
 
-#spectogram of input audio
+### spectogram of input audio
 <img src="image/predicted.png" width="100%" align="top-left" alt="" title="RNN" />
