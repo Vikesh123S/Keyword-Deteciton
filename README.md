@@ -90,26 +90,7 @@ history = model.fit(
     callbacks=tf.keras.callbacks.EarlyStopping(verbose=1, patience=2),
 )
 
-Epoch 1/10
-100/100 [==============================] - 6s 41ms/step - loss: 1.7503 - accuracy: 0.3630 - val_loss: 1.2850 - val_accuracy: 0.5763
-Epoch 2/10
-100/100 [==============================] - 0s 5ms/step - loss: 1.2101 - accuracy: 0.5698 - val_loss: 0.9314 - val_accuracy: 0.6913
-Epoch 3/10
-100/100 [==============================] - 0s 5ms/step - loss: 0.9336 - accuracy: 0.6703 - val_loss: 0.7529 - val_accuracy: 0.7325
-Epoch 4/10
-100/100 [==============================] - 0s 5ms/step - loss: 0.7503 - accuracy: 0.7397 - val_loss: 0.6721 - val_accuracy: 0.7713
-Epoch 5/10
-100/100 [==============================] - 0s 5ms/step - loss: 0.6367 - accuracy: 0.7741 - val_loss: 0.6061 - val_accuracy: 0.7975
-Epoch 6/10
-100/100 [==============================] - 0s 5ms/step - loss: 0.5650 - accuracy: 0.7987 - val_loss: 0.5489 - val_accuracy: 0.8125
-Epoch 7/10
-100/100 [==============================] - 0s 5ms/step - loss: 0.5099 - accuracy: 0.8183 - val_loss: 0.5344 - val_accuracy: 0.8238
-Epoch 8/10
-100/100 [==============================] - 0s 5ms/step - loss: 0.4560 - accuracy: 0.8392 - val_loss: 0.5194 - val_accuracy: 0.8288
-Epoch 9/10
-100/100 [==============================] - 0s 5ms/step - loss: 0.4101 - accuracy: 0.8547 - val_loss: 0.4809 - val_accuracy: 0.8388
-Epoch 10/10
-100/100 [==============================] - 0s 5ms/step - loss: 0.3905 - accuracy: 0.8589 - val_loss: 0.4973 - val_accuracy: 0.8363
+<img src="image/ceack.png" width="100%" align="top-left" alt="" title="RNN" />
 
 **training and validation loss curves to check how my model has improved during training:**
 <img src="image/accuracy.png" width="100%" align="top-left" alt="" title="RNN" />
