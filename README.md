@@ -3,7 +3,8 @@ Created a keyword detector using CNNs on Mel Spectrograms, this acts as a precur
 The original dataset consists of over 105,000 audio files in the WAV (Waveform) audio file format of people saying 35 different words. This data was collected by Google and released under a CC BY license.
 
 ### Setup
-Imported necessary modules and dependencies. i'll be using seaborn for visualization
+Create a new python or conda virtual environment.
+Necessary modules and dependencies are mentioned in requirements.txt.
 
 ### Impored the mini Speech Commands dataset
 The  dataset consists of over 105,000 audio files in the WAV (Waveform) audio file format of people saying 35 different words. This data was collected by Google and released under a CC BY license.
